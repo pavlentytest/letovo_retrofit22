@@ -3,61 +3,40 @@ package ru.samsung.itschool.mdev.myapplication;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import java.util.List;
+
 public class Answer {
-    @SerializedName("site")
+    @SerializedName("endOfWord")
     @Expose
-    private String site;
-    @SerializedName("name")
+    private Boolean endOfWord;
+    @SerializedName("pos")
     @Expose
-    private String name;
-    @SerializedName("desc")
+    private Integer pos;
+    @SerializedName("text")
     @Expose
-    private String desc;
-    @SerializedName("link")
-    @Expose
-    private Object link;
-    @SerializedName("elementPureHtml")
-    @Expose
-    private String elementPureHtml;
+    private List<String> text = null;
 
-    public String getSite() {
-        return site;
+    public Boolean getEndOfWord() {
+        return endOfWord;
     }
 
-    public void setSite(String site) {
-        this.site = site;
+    public void setEndOfWord(Boolean endOfWord) {
+        this.endOfWord = endOfWord;
     }
 
-    public String getName() {
-        return name;
+    public Integer getPos() {
+        return pos;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setPos(Integer pos) {
+        this.pos = pos;
     }
 
-    public String getDesc() {
-        return desc;
+    public List<String> getText() {
+        return text;
     }
 
-    public void setDesc(String desc) {
-        this.desc = desc;
+    public void setText(List<String> text) {
+        this.text = text;
     }
-
-    public Object getLink() {
-        return link;
-    }
-
-    public void setLink(Object link) {
-        this.link = link;
-    }
-
-    public String getElementPureHtml() {
-        return elementPureHtml;
-    }
-
-    public void setElementPureHtml(String elementPureHtml) {
-        this.elementPureHtml = elementPureHtml;
-    }
-
 }
